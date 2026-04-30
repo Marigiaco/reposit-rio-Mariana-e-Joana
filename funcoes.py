@@ -83,3 +83,41 @@ def calcula_pontos_sequencia_alta (l):
         i = i +1
     return 0
 
+def calcula_pontos_full_house (l):
+    i = 0
+    soma = 0
+    while i<len(l):
+        soma = soma + l[i]
+        i = i +1
+    contagens = {}
+    i = 0
+    while i<len(l):
+        valor = l[i]
+        if valor in contagens:
+            contagens[valor] = contagens[valor] +1
+        else:
+            contagens[valor] = 1
+        i = i +1
+
+    tres = False
+    dois = False
+
+    for valor in contagens:
+        if contagens[valor] == 3:
+            tres = True
+        elif contagens[valor] == 2:
+            dois = True
+
+    if tres and dois:
+        return soma
+    else:
+        return 0
+
+    
+    
+        
+     
+        
+
+
+
