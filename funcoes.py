@@ -65,3 +65,21 @@ def calcula_pontos_soma (l):
         soma = soma + l[i]
         i = i +1
     return soma
+
+def calcula_pontos_sequencia_baixa (l):
+    m = []
+    i = 1
+    while i<=3:
+        if i in l and i+1 in l and i+2 in l and i+3 in l:
+            return 15
+        i = i+1
+    return 0
+
+def calcula_pontos_sequencia_alta (l):
+    i = 1
+    while i<=2:
+        if i in l and i+1 in l and i+2 in l and i+3 in l and i+4 in l:
+            return 30
+        i = i +1
+    return 0
+
