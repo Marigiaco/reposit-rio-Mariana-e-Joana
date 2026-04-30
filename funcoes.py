@@ -57,3 +57,11 @@ def calcula_pontos_regra_simples (d):
         f = f +1
 
     return resultado
+
+def calcula_pontos_soma (l):
+    i = 0
+    soma = 0
+    while i<len(l):
+        soma = soma + l[i]
+        i = i +1
+    return soma
