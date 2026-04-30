@@ -113,7 +113,21 @@ def calcula_pontos_full_house (l):
     else:
         return 0
 
-    
+
+def calcula_pontos_quadra (l):
+    c = []
+    for i in range(1,7):
+        q = 0
+        for n in l:
+            if n ==i:
+                q = q +1
+        if q>=4:
+            soma=0
+            for n in l:
+                soma = soma +n
+            return soma
+    return 0
+            
     
         
      
