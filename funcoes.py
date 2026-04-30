@@ -149,6 +149,20 @@ def calcula_pontos_regra_avancada(faces):
     dic['sequencia_baixa'] = calcula_pontos_sequencia_baixa(faces)
 
     return dic
+
+def faz_jogada(dados,categoria,cartela_de_pontos):
+
+    if categoria in cartela_de_pontos['regra_avancada']:
+        pontos_a = calcula_pontos_regra_avancada(dados)
+        cartela_de_pontos['regra_avancada'][categoria] = pontos_a[categoria]
+    else:
+        categoria_int = int(categoria)
+        pontos_s = calcula_pontos_regra_simples(dados)
+        cartela_de_pontos['regra_simples'][categoria_int] = pontos_s[categoria_int]
+    
+    return cartela_de_pontos
+
+
     
      
         
