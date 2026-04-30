@@ -40,3 +40,20 @@ def remover_dado(rol, guar, n):
     novorol.append(guar[n])
 
     return [novorol, novoguar]
+
+def calcula_pontos_regra_simples (d):
+    resultado = {}
+    f = 1
+    while f<=6:
+        soma = 0
+        i = 0
+
+        while i<len(d):
+            if d[i] ==f:
+                soma = soma + d[i]
+            i = i +1
+
+        resultado[f] = soma
+        f = f +1
+
+    return resultado
