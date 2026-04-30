@@ -127,9 +127,29 @@ def calcula_pontos_quadra (l):
                 soma = soma +n
             return soma
     return 0
-            
+
+def calcula_pontos_quina (l):
+    c = []
+    for i in range (1,7):
+        q = 0
+        for n in l:
+            if n ==i:
+                q = q +1
+        if q>=5:
+            return 50
+    return 0
+
+def calcula_pontos_regra_avancada(faces):
+    dic = {}
+    dic['cinco_iguais'] = calcula_pontos_quina(faces)
+    dic['full_house'] = calcula_pontos_full_house(faces)
+    dic['quadra'] = calcula_pontos_quadra(faces)
+    dic['sem_combinacao'] = calcula_pontos_soma(faces)
+    dic['sequencia_alta'] = calcula_pontos_sequencia_alta(faces)
+    dic['sequencia_baixa'] = calcula_pontos_sequencia_baixa(faces)
+
+    return dic
     
-        
      
         
 
