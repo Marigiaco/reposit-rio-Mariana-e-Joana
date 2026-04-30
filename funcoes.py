@@ -26,3 +26,17 @@ def guardar_dado (drol, dguar, n):
 
     resultado = [restantes, m]
     return resultado
+
+def remover_dado(rol, guar, n):
+    i = 0
+    novoguar = []
+    
+    while i < len(guar):
+        if i != n:
+            novoguar.append(guar[i])
+        i = i + 1
+
+    novorol = rol.copy()
+    novorol.append(guar[n])
+
+    return [novorol, novoguar]
